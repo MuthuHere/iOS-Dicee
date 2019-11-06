@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+       // Test
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
    
     @IBAction func btnRollPressed(_ sender: UIButton) {
