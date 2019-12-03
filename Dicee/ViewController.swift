@@ -12,23 +12,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var leftDiceImageView: UIImageView!
     @IBOutlet weak var rightDiceImageView: UIImageView!
-    
-  
+
+    let arrayOfImages = [ #imageLiteral(resourceName: "DiceOne") ,#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix") ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // Test
+    
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-   
+
     @IBAction func btnRollPressed(_ sender: UIButton) {
-    
-        //change the button
-        leftDiceImageView.image = #imageLiteral(resourceName: "DiceSix")
-        rightDiceImageView.image = #imageLiteral(resourceName: "DiceFour")
-    
+        leftDiceImageView.image = arrayOfImages.randomElement()
+        rightDiceImageView.image = arrayOfImages.randomElement()
     }
 
 }
